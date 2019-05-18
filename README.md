@@ -1,0 +1,2 @@
+# Spotify-Analysis
+From music industry to exploration of spotify API and its rich dataset.
