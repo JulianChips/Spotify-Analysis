@@ -44,9 +44,9 @@ function renderYAxes(yLinearScale, yAxis){
 
 // section 2: important functions for building the svg
 /* function - yScale */
-function yScale(spotifyData, ySelection){
+function yScale(spotifyDataJson, ySelection){
     let yLinearScale = d3.scaleLinear()
-        .domain([0, d3.max(spotifyData, d => d[ySelection])])
+        .domain([0, d3.max(spotifyDataJson, d => d[ySelection])])
         .range([height, 0]);
     return yLinearScale;
 }
@@ -58,23 +58,36 @@ function numComma(x) {
 // section 3: import data and draw the chart
 (async function(){
     const spotifyData = await d3.json('/api/revenue')
-    console.log(spotifyData.data)
-    spotifyData.forEach(data => {
-        data.Total_Revenue = +data.Total_Revenue;
-        data.Premium_Revenue = +data.Premium_Revenue;
-        data.Ad_Supported = +data.Ad_Supported;
-        data.RD_Cost = +data.RD_Cost; 
+    // console.log(spotifyData.data)
+
+    let spotifyDataJson = []
+       
+
+    let spotifyData2 = spotifyData.data
+
+    spotifyData2.forEach(data => {
+        let tempName = {
+            Year: data[0],
+            Total_Revenue: data[1],
+            Premium_Revenue: data[2],
+            Ad_Supported: data[3],
+            RD_Cost: data[4]
+        }
+
+        spotifyDataJson.push(tempName)
     });
     
+    console.log(spotifyDataJson);
+
     let tempColor;
 
     const xBandScale = d3.scaleBand()
-        .domain(spotifyData.map(d => d.Year))
+        .domain(spotifyDataJson.map(d => d.Year))
         .paddingInner(.05)
         .paddingOuter(.05)    
         .range([0, width])
     
-    let yLinearScale = yScale(spotifyData, ySelection)  // call function yScale **
+    let yLinearScale = yScale(spotifyDataJson, ySelection)  // call function yScale **
 
     const bottomAxis = d3.axisBottom(xBandScale);
     let leftAxis = d3.axisLeft(yLinearScale);
@@ -87,11 +100,11 @@ function numComma(x) {
         .call(leftAxis)
     
     const colors = d3.scaleLinear()
-        .domain([0, spotifyData.length * .33, spotifyData.length * .66, spotifyData.length])
+        .domain([0, spotifyDataJson.length * .33, spotifyDataJson.length * .66, spotifyDataJson.length])
         .range(['#b58929', '#c61c6f', '#268bd2', '#85992c'])
     
     let myChart = chartGroup.selectAll('rect')
-        .data(spotifyData)
+        .data(spotifyDataJson)
         .enter()
         .append('rect')
         .attr('fill', (d, i) => colors(i))
@@ -167,7 +180,7 @@ function numComma(x) {
                 
                 console.log('y:', ySelection);
                 
-                yLinearScale = yScale(spotifyData, ySelection);
+                yLinearScale = yScale(spotifyDataJson, ySelection);
                 
                 myChart = drawBars(myChart, yLinearScale, ySelection)
                 // circles = drawCircles(circles, xLinearScale, yLinearScale, xSelection, ySelection);

@@ -14,7 +14,7 @@ body {
 .wrapper {
   position: relative;
   min-height: 100%;
-  padding-bottom: 50px;
+  padding-bottom: 5px;
   overflow: auto;
 }
 
@@ -87,7 +87,7 @@ select {
 /* The styles for the parallax */
 .hero {
   position: relative;
-  height: 550px;
+  height: 200px;
   padding: 20px;
   margin: 0;
   background: black;
@@ -97,14 +97,14 @@ select {
   background-size: cover;
 }
 
-.hero h1 {
-  margin-top: 200px;
-  font-size: 0.1rem;
+.hero h2 {
+  margin-top: 30px;
+  font-size: 1rem;
   animation: title 1.2s forwards linear;
 }
 
 .hero p {
-  font-size: 2rem;
+  font-size: 1.3rem;
   opacity: 0;
   animation: subtitle 1.2s forwards linear;
   animation-delay: 1.2s;
@@ -136,7 +136,7 @@ select {
 .hero h1 {
     animation: smaller-title 1.2s forwards linear;
   }
-}
+
 
 /*keyframe animations which will be used to animate the title*/
 @keyframes title {
@@ -145,7 +145,7 @@ select {
   }
 
   to {
-    font-size: 7.5rem;
+    font-size: 2.5rem;
     opacity: 1;
   }
 }
