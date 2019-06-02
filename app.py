@@ -89,10 +89,15 @@ def features():
 	# Render Home Template
 	return render_template("features.html")
 
-@app.route("/spotifystats")
-def spotify():
+@app.route("/revenueYear")
+def year():
 	# Render Home Template
-	return render_template("spotifystats.html")
+	return render_template("revenueYear.html")
+
+@app.route("/revenueQuarter")
+def quarter():
+	# Render Home Template
+	return render_template("revenueQuarter.html")
 
 @app.route("/api/revenue")
 def apiRevenue():	

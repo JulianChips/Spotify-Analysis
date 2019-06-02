@@ -1,0 +1,166 @@
+
+h2 {
+    font-family: 'Bree Serif', serif;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+.d3-tip {
+    line-height: 1;
+    font-weight: 500;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 2px;
+    text-align: center;
+    border-radius: 4px;
+    opacity: 0.55;
+  }
+  
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+    box-sizing: border-box;
+    display: inline;
+    font-size: 10px;
+    width: 100%;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.8);
+    content: "\25BC";
+    position: absolute;
+    text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+    margin: -1px 0 0 0;
+    top: 100%;
+    left: 0;
+}
+
+.iframeContainer {
+    padding: 20px;
+    border: 1px solid #e3e3e3;
+  }
+  
+  /* Sticky Footer rules (https://getbootstrap.com/examples/sticky-footer/) */
+  html {
+    position: relative;
+    min-height: 100%;
+  }
+  
+  body {
+    /* Padding bottom by footer height */
+    padding-bottom: 80px;
+  }
+  
+  #footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%; /* Set the fixed height of the footer here */
+    height: 10px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    text-align: center;
+    background-color: #f5f5f5;
+  }
+  
+  #footer p {
+    margin: 0;
+    font-size: 16px;
+  }
+
+  .aText {
+    font-family: sans-serif;
+    font-size: 16px;
+    text-anchor: middle;
+  }
+  
+.active {
+font-weight: bold;
+fill: darkslategray;
+transition: fill 0.3s ease-out;
+text-anchor: middle;
+font-size: 1.0em;
+font-family: 'Bree Serif', serif;
+}
+
+.inactive {
+font-weight: lighter;
+fill: #bba2a2;
+transition: fill 0.3s ease-out;
+text-anchor: middle;
+font-size: 1.0em;
+font-family: 'Bree Serif', serif;
+}
+
+.inactive:hover {
+fill: rgb(250, 48, 48);
+cursor: pointer;
+}
+
+.sidelabel {
+font-weight: 200;
+fill: rgb(67, 75, 75);
+transition: fill 0.3s ease-out;
+text-anchor: middle;
+font-size: 0.9em;
+font-family: 'Bree Serif', serif;
+}
+
+
+
+h1 {
+font-family: 'Faster One', cursive;
+font-size: 2.6em;
+text-align:  left;
+color: rgb(214, 83, 83);
+margin-left: 110px;
+}
+
+h5 {
+font-family:Georgia, 'Times New Roman', Times, serif;
+font-weight: bold;
+text-align: left;
+font-size: 1.0em;
+margin-left: 110px;
+}
+
+h6 {
+font-size: 1em;
+font-weight: bold;
+margin-left: 110px;
+}
+
+p {
+
+margin-left: 100px;
+margin-top: -20px;
+font-size: 0.86em;
+}
+
+ul li {
+text-align: left;
+
+}
+
+
+
+/* Mobile Rules */
+@media screen and (max-width: 530px) {
+.stateText {
+    display: none;
+}
+
+.aText {
+    font-size: 14px;
+}
+}
+
+@media screen and (max-width: 400px) {
+.aText {
+    font-size: 13px;
+}
+}
+  
