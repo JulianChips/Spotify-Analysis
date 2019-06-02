@@ -17,7 +17,7 @@ class UserAge(db.Model):
 	__tablename__ = "activeUserAge"
 
 	id = db.Column(db.Integer, primary_key=True)
-	AgeGroup = db.Column(db.String(64))
+	Age_Group = db.Column(db.String(64))
 	Percentage = db.Column(db.Integer)
 
 	def __repr__(self):
@@ -34,7 +34,7 @@ class UserRegion(db.Model):
 		return '<UserRegion %r>' % (self.Region)
 
 # class DemographicsAge(db.Model):
-# 	__tablename__ = "activeUserAge"
+# 	__tablename__ = "demographicsAge"
 
 # 	id = db.Column(db.Integer, primary_key=True)
 # 	AgeGroup = db.Column(db.Integer)
@@ -57,7 +57,7 @@ class Revenue(db.Model):
 		return '<Revenue %r>' % (self.Total_Revenue)
 
 class RevenueQuarter(db.Model):
-	__tablename__ = "revenue"
+	__tablename__ = "RevenueQuarter"
 
 	id = db.Column(db.Integer, primary_key=True)
 	Quarter = db.Column(db.Text)
@@ -94,33 +94,37 @@ def spotify():
 	# Render Home Template
 	return render_template("spotifystats.html")
 
-# @app.route("/api/features")
-# def features():	
-# 	results = db.session.query(Features.artist,Features.album,Features.song,Features.danceability,Features.energy,Features.key,
-# 		Features.loudness,Features.mode,Features.speechiness,Features.acousticness,Features.instrumentalness,Features.liveness,
-# 		Features.valence,Features.tempo,Features.uri,Features.duration_ms,Features.time_signature).all()
-# 	data = []
-# 	for result in results:
-# 		data.append({
-# 			"artist": result[0],
-# 			"album": result[1],
-# 			"song": result[2],
-# 			"danceability": result[3],
-# 			"energy": result[4],
-# 			"key": result[5],
-# 			"loudness": result[6],
-# 			"mode": result[7],
-# 			"speechiness": result[8],
-# 			"acousticness": result[9],
-# 			"instrumentalness": result[10],
-# 			"liveness": result[11],
-# 			"valence": result[12],
-# 			"tempo": result[13],
-# 			"uri": result[14],
-# 			"duration_ms": result[15],
-# 			"time_signature": result[16],
-# 			})
-# 	return jsonify(data)
+@app.route("/api/revenue")
+def apiRevenue():	
+	results = db.session.query(Revenue.Year, Revenue.Total_Revenue, Revenue.Premium_Revenue, Revenue.Ad_Supported, Revenue.RD_Cost).all()
+	data = {
+		'data': results
+	}
+	return jsonify(data)
+
+@app.route("/api/revenue/quarter")
+def apiRevenueQuarter():	
+	results = db.session.query(RevenueQuarter.Quarter, RevenueQuarter.Premium, RevenueQuarter.AdSupported, RevenueQuarter.Total).all()
+	data = {
+		'data': results
+	}
+	return jsonify(data)
+
+@app.route("/api/user/age")
+def apiUserAge():	
+	results = db.session.query(UserAge.Age_Group, UserAge.Percentage).all()
+	data = {
+		'data': results
+	}
+	return jsonify(data)
+
+@app.route("/api/user/region")
+def apiUserRegion():	
+	results = db.session.query(UserRegion.Region, UserRegion.Percentage).all()
+	data = {
+		'data': results
+	}
+	return jsonify(data)
 
 if __name__ == "__main__":
 	app.run()
