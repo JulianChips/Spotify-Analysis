@@ -9,12 +9,7 @@ body {
 .wrapper {
   position: absolute;
   min-height: 100%;
-<<<<<<< HEAD
   margin: 0 0 0 0
-=======
-  padding-bottom: 5px;
-  overflow: auto;
->>>>>>> 96221c5e7fd8707d6b8676e95de4276f7c8e9b01
 }
 
 /* The footer is positioned at the bottom of the page */
