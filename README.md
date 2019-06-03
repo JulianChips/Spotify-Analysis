@@ -31,7 +31,7 @@ Using Spotify's API and Tableau we were able to generate a highly interactive vi
 ##### 4. General Trends in Revenue within Spotify
 * Provide a historical view of the transformation of music industry by revenue through the eyes of spotify in both yearly and quarterly increments. 
  
-#### Tools used:
+#### Tools and Sources Used:
 * Python libraries (bar chart race)
 * JavaScript libraries (map, chart, etc)
 * Tableau – For interactive visualizations
@@ -42,3 +42,5 @@ Using Spotify's API and Tableau we were able to generate a highly interactive vi
 * https://developer.spotify.com/documentation/web-api/quick-start/
 * https://spotifycharts.com/regional
 * https://github.com/fbkarsdorp/spotify-chart
+* https://www.riaa.com/u-s-sales-database/
+* https://www.statista.com/topics/2075/spotify/
