@@ -1,12 +1,4 @@
 
-h2 {
-    font-family: 'Bree Serif', serif;
-    font-weight: bold;
-    margin-bottom: 30px;
-    margin-top: 50px;
-    margin-left: 100px;
-}
-
 .d3-tip {
     line-height: 1;
     font-weight: 500;
@@ -110,35 +102,6 @@ font-family: 'Bree Serif', serif;
 }
 
 
-
-h1 {
-font-family: 'Faster One', cursive;
-font-size: 2.6em;
-text-align:  left;
-color: rgb(214, 83, 83);
-margin-left: 110px;
-}
-
-h5 {
-font-family:Georgia, 'Times New Roman', Times, serif;
-font-weight: bold;
-text-align: left;
-font-size: 1.0em;
-margin-left: 110px;
-}
-
-h6 {
-font-size: 1em;
-font-weight: bold;
-margin-left: 110px;
-}
-
-p {
-
-margin-left: 100px;
-margin-top: -20px;
-font-size: 0.86em;
-}
 
 ul li {
 text-align: left;

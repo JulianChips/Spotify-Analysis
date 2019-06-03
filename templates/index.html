@@ -1,61 +1,47 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Spotify Web Project</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://bootswatch.com/4/superhero/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-  <link rel="stylesheet" href="../static/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../static/css/style1.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alef|Quantico&display=swap" rel="stylesheet">
+    <title>Team Rejects Presents - Spotify Data Analysis - Home</title>
 </head>
-
 <body>
-  <div class="container-fluid">
-  <div class="wrapper">
-    <nav class="navbar navbar-default">
-      
-        <div class="navbar-header">
-          <a class="navbar-brand" href="/">
-            <button type="button" class="btn btn-dark">Home</button>
-          </a>
-          <a class="navbar-brand" href="/features">
-            <button type="button" class="btn btn-dark">Features</button>
-          </a>
-          <a class="navbar-brand" href="/analysis">
-            <button type="button" class="btn btn-dark">Charts</button>
-          </a>
-          <a class="navbar-brand" href="/revenueYear">
-            <button type="button" class="btn btn-dark">Revenue Year</button>
-          </a>
-          <a class="navbar-brand" href="/revenueQuarter">
-            <button type="button" class="btn btn-dark">Revenue Quarter</button>
-          </a>
+    <div class="hero-image">
+        <div class="hero-text">
+            <h1 style="font-size:50px">Spotify Web Project</h1>
+            <p>Presented by Team Rejects:<br> Julian Yanez, Wenbein Zhao Billy, Trevor Kulbeth & Kelly McVey & Connor Crossey</p>
+            <a href="/" class="btn btn-dark">Home</a>
+            <a href="/features" class="btn btn-dark">Features</a>
+            <a href="/analysis" class="btn btn-dark">Top Songs</a>
+            <a href="/revenueYear" class="btn btn-dark">Yearly Revenue</a>
+            <a href="/revenueQuarter" class="btn btn-dark">Quarterly Revenue</a>
         </div>
-      
-    </nav>
-    <div class="hero text-center">
-      <h1>Spotify Web Project</h1>
-      <p>Julian Yanez, Wenbein Zhao Billy, Trevor Kulbeth & Kelly McVey & Connor Crossey</p>
     </div>
-  </div>
-  <div class="row text-center">
-    <div class="col-12">
-      <div class="jumbotron jumbotron-fluid">
-    <h3 class="display-4">Team Rejects Spotipy Project Outline</h3>
-    <p class="lead"> Outline of our project.</p>
+    <div class="container">
+        <div class="row">
+
+                <div class='col-12' style='text-align: center'><iframe allowFullScreen="allowFullScreen" src="https://www.youtube.com/embed/YWSq0lrr1L8?ecver=1&amp;iv_load_policy=1&amp;rel=0&amp;showinfo=0&amp;yt:stretch=16:9&amp;autohide=1&amp;color=white&amp;width=1080&amp;width=1080" width="900" height="600" allowtransparency="true" frameborder="0"><div style="float: left; margin: 3px"><div><a id=PCRPXOtL href>https://www.rockpamperscissors.co.uk/my-audi-was-stolen/</a></div><div><a id=PCRPXOtL href=https://www.rockpamperscissors.co.uk/my-audi-was-stolen/>Jen</a></div></div><script>function execute_YTvideo(){return youtube.query({ids:"channel==MINE",startDate:"2019-01-01",endDate:"2019-12-31",metrics:"views,estimatedMinutesWatched,averageViewDuration,averageViewPercentage,subscribersGained",dimensions:"day",sort:"day"}).then(function(e){},function(e){console.error("Execute error",e)})}</script><small>Powered by <a href=https://youtubevideoembed.com/>Embed YouTube Video</a></small></iframe></div>
+
+        </div>
+        <div class="row">
+
+            <div class="col-12">
+                <h4>An Introduction</h4>
+                <p>The Music industry has always been changing. Each 10-20 years we see a huge shift of medium of delivery revolutionized with newer and better technologies. These mini-revolutions affected not only musicians and listeners, they also changed our society in fundamental economic and cultural way. </p>
+                <p>Team Reject looked into one specific aspect of this paradigm shift phenomenon – Spotify. A tiny Swedish company run by a 20-some year-old Daniel Ek overtook the industry by storm. In less than 10 years, they become the No.1 music provider of all media sources. </p>
+                <p>We looked into the business data as well as its API to understand its various functions. This website is the showcase of several visualization techniques we deployed to demonstrate Spotify’s data.</p>
+            </div>
+        </div>
+        
     </div>
-    </div>
-    
-  </div>
-    <div class="row mb-5">
-      <div class="col-3"></div>
-      <div class="col-6 text-center">
-        <iframe width="800" height="450" src="https://www.youtube.com/embed/YWSq0lrr1L8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <div class="col-3"></div>
-    </div>
-    
-</div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>

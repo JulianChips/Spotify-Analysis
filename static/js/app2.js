@@ -1,6 +1,6 @@
 // section 1: set up the svg canvas
 const svgWidth = 1000, svgHeight = 800;
-const margin = {top: 0, right: 60, bottom: 160, left: 100};
+const margin = {top: 60, right: 40, bottom: 140, left: 40};
 const height = svgHeight - margin.top - margin.bottom;
 const width = svgWidth - margin.left - margin.right;
 
@@ -42,9 +42,9 @@ function renderYAxes(yLinearScale, yAxis){
 
 // section 2: important functions for building the svg
 /* function - yScale */
-function yScale(spotifyData, ySelection){
+function yScale(spotifyDataJson, ySelection){
     let yLinearScale = d3.scaleLinear()
-        .domain([0, d3.max(spotifyData, d => d[ySelection])])
+        .domain([0, d3.max(spotifyDataJson, d => d[ySelection])])
         .range([height, 0]);
     return yLinearScale;
 }
@@ -56,22 +56,33 @@ function numComma(x) {
 // section 3: import data and draw the chart
 (async function(){
     const spotifyData = await d3.json('/api/revenue/quarter')
-    console.log(spotifyData.data);
-    spotifyData.forEach(data => {
-        data.Total = +data.Total;
-        data.Premium = +data.Premium;
-        data.AdSupported = +data.AdSupported;
+    
+    spotifyDataJson = [];
+    let spotifyData2 = spotifyData.data;
+
+    spotifyData2.forEach(data => {
+        let tempName = {
+            Quarter: data[0],
+            Premium: data[1],
+            AdSupported: data[2],
+            Total: data[3]
+        }
+
+        spotifyDataJson.push(tempName)
     });
     
+    console.log(spotifyDataJson);
+    
+
     let tempColor;
 
     const xBandScale = d3.scaleBand()
-        .domain(spotifyData.map(d => d.Quarter))
+        .domain(spotifyDataJson.map(d => d.Quarter))
         .paddingInner(.1)
         .paddingOuter(.1)    
         .range([0, width])
     
-    let yLinearScale = yScale(spotifyData, ySelection)  // call function yScale **
+    let yLinearScale = yScale(spotifyDataJson, ySelection)  // call function yScale **
 
     const bottomAxis = d3.axisBottom(xBandScale);
     let leftAxis = d3.axisLeft(yLinearScale);
@@ -84,11 +95,11 @@ function numComma(x) {
         .call(leftAxis)
     
     const colors = d3.scaleLinear()
-        .domain([0, spotifyData.length * .33, spotifyData.length * .66, spotifyData.length])
+        .domain([0, spotifyDataJson.length * .33, spotifyDataJson.length * .66, spotifyDataJson.length])
         .range(['#b58929', '#c61c6f', '#268bd2', '#85992c'])
     
     let myChart = chartGroup.selectAll('rect')
-        .data(spotifyData)
+        .data(spotifyDataJson)
         .enter()
         .append('rect')
         .attr('fill', (d, i) => colors(i))
@@ -112,8 +123,8 @@ function numComma(x) {
     
     chartGroup.append("text")
         .attr("transform", "rotate(-90)")
-        .attr("y", 0 - margin.left + 105)
-        .attr("x",0 - (height / 2) + 240)
+        .attr("y", 0 - margin.left + 45)
+        .attr("x",0 - (height / 2) + 210)
         .attr("dy", "1em")
         .attr("class", "sidelabel")
         .text("Revenue / Cost in Euro");      
@@ -159,7 +170,7 @@ function numComma(x) {
                 
                 console.log('y:', ySelection);
                 
-                yLinearScale = yScale(spotifyData, ySelection);
+                yLinearScale = yScale(spotifyDataJson, ySelection);
                 
                 myChart = drawBars(myChart, yLinearScale, ySelection)
 

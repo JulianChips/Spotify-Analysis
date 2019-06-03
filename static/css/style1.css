@@ -1,0 +1,89 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Bree Serif', serif;
+    background-color: #304040 !important;
+  }
+
+  
+  .bg-light{
+    background-color: #c9d1c8;
+  }
+
+  .hero-image-sm {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/spotify.jpg");
+    height: 9%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  .hero-text-sm {
+    font-family: 'Bree Serif', serif;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #c9d1c8;
+  }
+
+  .hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/spotify.jpg");
+    height: 25%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  .hero-text {
+    font-family: 'Bree Serif', serif;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #c9d1c8;
+  }
+    
+
+a.btn {border-radius: .25rem; border: 1px solid transparent; padding: .3rem .4rem; }
+a.btn:hover { border-radius: .25rem; }
+a.btn {font-size:0.9rem; color: #c9d1c8}
+a.btn-sm {font-size: 0.8rem; color: #c9d1c8}
+.container {
+    padding: 20px 5px 20px 5px;
+}
+
+p {
+    font-family: 'Quantico', sans-serif;
+    color: #c9d1c8; 
+    font-size: 1em;
+}
+
+h2 {
+    font-size: 1.8rem !important;
+}
+
+h4 {
+    text-align: center;
+    font-family: 'Quantico', sans-serif !important;
+    color: #c9d1c8 !important;
+    font-weight: bold !important;
+    padding-top: 10px;
+}
+
+.col-12 p {
+    margin-left: 110px;
+    margin-right: 110px;
+}
+
+#viz {
+    background-color: white;
+}
+
+.svg1 {
+    padding: 50px;
+}
