@@ -11,27 +11,33 @@ Music industry has gone through a significant transformation in the last 20 year
 
 https://spotifyrejects.herokuapp.com/
 
-##### 1. General Trend of Music Industry
-* Provide a historical view of the transformation of music industry by revenue source (brick and mortar to online streaming), by medium, and by consumer populations
-* A historical view of Spotify’s raise vs. other streaming services
-* Provide a dynamic visualization dashboard to illustrate the market condition
- 
-##### 2. Spotify API
+##### Spotify API
 * A quick review of how the API is set up, how to connect to it using Python, and what kind of data set are available
 * Spotify Data exploration (visualization) - by using top 200 chart site, we can provide:
     i.      Music Patterns over time
     ii.      Music Patterns over geographic area (map)
-##### 3. Final Bar Chart Race visualization
-* Using Python Flourish to build a cool bar chart race showing time series-based visualization:
-    i.  Best artist/genre over 2 years by week
-    ii. Music streaming providers by volume, revenue, subscribers, over time
+
+#### Visualizations
+
+##### 1. Bar Chart Race Visualization
+The music industry has changed a lot since 1973, one of the most significant changes being the evolution of the music industries revenue source. Using Python Flourish we used sales revenue by device type to create a cool time series-based bar chart race  visualization:
+
+##### 2. Music Features
+Using Spotify’s API and Tableau, we were able to analyze the features inherent of the most popular songs over the past two years. These features include “danceability”, “energy”, “loudness”, “valence”, etc. for each week. 
+
+##### 3. General Trend of the Most Popular Songs and Genres in the Global Music Industry
+Using Spotify's API and Tableau we were able to generate a highly interactive visualization enabling anyone to find the top 5 genres and top 10 songs weekly on Spotify since January of 2017.  Within this visualization you can select any number of the 62 countries currently serviced by Spotify and see the top ten songs for each country each week. You can also further sort your data by selecting your week(s) of interest for each country. In addition, when you click on one of the songs in the table at the bottom right corner you can hear the song on the embedded player on the page. For all the music enthusiasts out there. Enjoy!
+ 
+##### 4. General Trends in Revenue within Spotify
+* Provide a historical view of the transformation of music industry by revenue through the eyes of spotify in both yearly and quarterly increments. 
  
 #### Tools used:
 * Python libraries (bar chart race)
 * JavaScript libraries (map, chart, etc)
-* Tableau – final presentation in story mode
+* Tableau – For interactive visualizations
 * Spotify API with Spotipy (and listening to a lot of music)
-*  https://spotipy.readthedocs.io/en/latest/
+* Youtube - adding music and videos to our presentation
+* https://spotipy.readthedocs.io/en/latest/
 * https://developer.spotify.com/documentation/web-api/quick-start/
 * https://spotifycharts.com/regional
 * https://pypi.org/project/Spotify-Charts-API/
