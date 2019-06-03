@@ -1,8 +1,3 @@
-{
-  box-sizing: border-box;
-  font-family: Ubuntu, sans-serif;
-}
-
 html,
 body {
   height: 100%;
@@ -12,10 +7,14 @@ body {
 
 /* The wrapper contains all of the page's content besides the footer, which is pushed to the bottom of the page */
 .wrapper {
-  position: relative;
+  position: absolute;
   min-height: 100%;
+<<<<<<< HEAD
+  margin: 0 0 0 0
+=======
   padding-bottom: 5px;
   overflow: auto;
+>>>>>>> 96221c5e7fd8707d6b8676e95de4276f7c8e9b01
 }
 
 /* The footer is positioned at the bottom of the page */
@@ -44,45 +43,6 @@ body {
 }
 
 
-
-/* Adding styles to the aside and filter form */
-.ufo-form {
-  margin-top: 50px;
-}
-
-.filters .panel-body {
-  padding: 0;
-}
-
-.filters {
-  margin-top: 10px;
-}
-
-select {
-  display: block;
-  width: 100%;
-  padding: 8px;
-  color: #8e979f;
-  outline: none;
-}
-
-#table-area th {
-  text-align: center;
-}
-
-#table-area th:first-child,
-#table-area th:nth-child(2),
-#table-area th:nth-child(6) {
-  min-width: 70px;
-}
-
-.loader {
-  margin-top: 50px;
-}
-
-.margin-top-50 {
-  margin-top: 50px;
-}
 
 /* The styles for the parallax */
 .hero {

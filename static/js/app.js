@@ -1,6 +1,6 @@
 // section 1: set up the svg canvas
 const svgWidth =1000, svgHeight = 800;
-const margin = {top: 0, right: 60, bottom: 160, left: 100};
+const margin = {top: 80, right: 140, bottom: 160, left: 100};
 const height = svgHeight - margin.top - margin.bottom;
 const width = svgWidth - margin.left - margin.right;
 
@@ -129,7 +129,7 @@ function numComma(x) {
     chartGroup.append("text")
         .attr("transform", "rotate(-90)")
         .attr("y", 0 - margin.left + 105)
-        .attr("x",0 - (height / 2) + 240)
+        .attr("x",0 - (height / 2) + 200)
         .attr("dy", "1em")
         .attr("class", "sidelabel")
         .text("Revenue / Cost in Euro");      

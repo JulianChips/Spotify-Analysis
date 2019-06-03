@@ -1,7 +1,19 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+<<<<<<< HEAD
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alef|Quantico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="../static/css/style1.css">
+    
+    <title>Team Rejects Presents - Spotify Data Analysis - Revenue by Year</title>
+=======
   <meta charset="utf-8">
   <title>Spotify Stats</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,57 +27,41 @@
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
   <link rel="stylesheet" href="../static/css/style.css">
   <link rel="stylesheet" href="../static/css/styles.css">
+>>>>>>> 96221c5e7fd8707d6b8676e95de4276f7c8e9b01
 </head>
-
 <body>
-  <div class="container-fluid">
-  <div class="wrapper">
-    <nav class="navbar navbar-default">
-      
-        <div class="navbar-header">
-          <a class="navbar-brand" href="/">
-            <button type="button" class="btn btn-dark">Home</button>
-          </a>
-          <a class="navbar-brand" href="/features">
-            <button type="button" class="btn btn-dark">Features</button>
-          </a>
-          <a class="navbar-brand" href="/analysis">
-            <button type="button" class="btn btn-dark">Charts</button>
-          </a>
-          <a class="navbar-brand" href="/revenueYear">
-            <button type="button" class="btn btn-dark">Revenue Year</button>
-          </a>
-          <a class="navbar-brand" href="/revenueQuarter">
-            <button type="button" class="btn btn-dark">Revenue Quarter</button>
-          </a>
+    <div class="hero-image-sm">
+        <div class="hero-text-sm">
+            <h2 style="font-size:50px">Spotify Web Project</h2>
+            
+            <a href="/" class="btn-sm btn-dark">Home</a>
+            <a href="/features" class="btn-sm btn-dark">Features</a>
+            <a href="/analysis" class="btn-sm btn-dark">Top Songs</a>
+            <a href="/revenueYear" class="btn-sm btn-dark">Yearly Revenue</a>
+            <a href="/revenueQuarter" class="btn-sm btn-dark">Quarterly Revenue</a>
         </div>
-      
-    </nav>
-  </div>
-  <div class="row text-center">
-    <div class="col-12">
-      <div class="jumbotron jumbotron-fluid">
-    <h2>Spotify Revenue 2016-2019 by Quarter (in Million Euros)</h2>
-    <p class="lead">  </p>
     </div>
+    <div class="container">
+            <div class="row text-center">
+                    <div class="col-12">
+                      <div id="viz2" style='background-color: white;'></div>
+                    </div>
+            </div>
+        <div class="row">
+
+            <div class="col-12">
+                <h4>Revenue Increase by Year (in Euro)</h4>
+                <p>The following chart illustrates the exponential growth of Spotify in the past five years.<br>
+                    Source: Statista / IRAA: <a href="https://www.statista.com/topics/2075/spotify/">https://www.statista.com/topics/2075/spotify/</a></p>
+                </div>
+        </div>
+        
     </div>
-    
-  </div>
-  <div class="row text-center">
-    <div class="col-1"></div>
-    <div class="col-10">
-      <p>The following chart illustrates the exponential growth of Spotify in the 13 quarters.<br>
-      Source: Statista / IRAA: <a href="https://www.statista.com/topics/2075/spotify/">https://www.statista.com/topics/2075/spotify/</a></p>
-      <div class = "w-100" id="viz2"></div>
-    </div>
-    <div class="col-1"></div>
-    </div>
-    
-  </div>
-    
-</div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
-  <script src="../static/js/app2.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
+    <script src="../static/js/app2.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
