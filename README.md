@@ -41,4 +41,4 @@ Using Spotify's API and Tableau we were able to generate a highly interactive vi
 * https://spotipy.readthedocs.io/en/latest/
 * https://developer.spotify.com/documentation/web-api/quick-start/
 * https://spotifycharts.com/regional
-* https://pypi.org/project/Spotify-Charts-API/
+* https://github.com/fbkarsdorp/spotify-chart
