@@ -5,7 +5,7 @@ From music industry to exploration of spotify API and its rich dataset.
 
 ##### Team Reject Members: Julian Yanez, Connor Crossey, Trevor Kulbeth, Billy Zhao, Kelly McVey
 
-###Executive Summary:
+### Executive Summary:
 
 Music industry has gone through a significant transformation in the last 20 years and it’s continuing involving. One of the major players of this revolution is Spotify. In merely 10 years, Spotify became the No. 1 music streaming service and main revenue source for many artists and music vendors from large music powerhouses to independent labels. While its positive effect on the music industry as whole is still up for a debate, we would like to study its data to find some insights on this new phenomenon. Luckily, Spotify provided us a feature rich RESTful API to play with. We used the last two weeks to delve into this treasure trove of data and gleen some valuable insights into the visualizations to help us better understand the music industry. The following is a discussion of the analysis and interactive visualizations found on the heroku app in the link below.
 
@@ -17,7 +17,7 @@ https://spotifyrejects.herokuapp.com/
     i.      Music Patterns over time
     ii.      Music Patterns over geographic area (map)
 
-#### Visualizations
+### Visualizations
 
 ##### 1. Bar Chart Race Visualization
 The music industry has changed a lot since 1973, one of the most significant changes being the evolution of the music industries revenue source. Using Python Flourish we used sales revenue by device type to create a cool time series-based bar chart race  visualization:
@@ -36,6 +36,7 @@ Using Spotify's API and Tableau we were able to generate a highly interactive vi
 * JavaScript libraries (map, chart, etc)
 * Tableau – For interactive visualizations
 * Spotify API with Spotipy (and listening to a lot of music)
+* Flourish - Makes awesome race visualizations
 * Youtube - adding music and videos to our presentation
 * https://spotipy.readthedocs.io/en/latest/
 * https://developer.spotify.com/documentation/web-api/quick-start/
