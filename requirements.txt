@@ -16,7 +16,7 @@ itsdangerous==0.24
 
 jedi==0.11.0
 
-Jinja2==2.10
+Jinja2==2.11.3
 
 MarkupSafe==1.0
 
