@@ -34,7 +34,7 @@ psycopg2==2.7.3.2
 
 ptyprocess==0.5.2
 
-Pygments==2.2.0
+Pygments==2.7.4
 
 simplegeneric==0.8.1
 
